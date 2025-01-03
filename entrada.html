@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script> <!-- Coloca aquí la referencia al archivo JavaScript -->
+    <title>Entrada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #e0f7e0; /* Color de fondo de la página verde claro */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px; /* Tamaño más grande del título */
+        }
+
+        .table-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            overflow-y: auto;
+            max-height: 80vh; /* Ajusta la altura máxima del contenedor */
+            padding: 20px;
+            margin: 20px; /* Espacio entre el contenedor y el fondo de la página */
+            border: 1px solid #ccc; /* Borde alrededor del contenedor para visualización */
+            background-color: #ffffff; /* Color de fondo del contenedor */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 10px;
+            width: 45%;
+            min-width: 300px;
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr {
+            transition: background-color 0.3s; /* Transición para el cambio de color de fondo */
+        }
+
+        tr:hover {
+            background-color: #f0f0f0; /* Color de fondo al hacer hover sobre la fila */
+        }
+
+        tr.highlight {
+            background-color: #d1ffd1 !important; /* Color verde claro para resaltar la fila */
+        }
+
+        .checkbox-cell {
+            text-align: center;
+            width: 1%;
+        }
+
+        .row-checkbox {
+            display: none; /* Oculta los checkboxes */
+        }
+
+        /* Estilo para cuando el checkbox está marcado */
+        .row-checkbox:checked ~ td {
+            background-color: #d1ffd1; /* Color de fondo para las celdas cuando el checkbox está marcado */
+        }
+
+        /* Estilo para cuando el checkbox está marcado en la última celda de la fila */
+        .row-checkbox:checked ~ td:last-child {
+            border-right: 1px solid #ccc; /* Borde derecho para mantener consistencia visual */
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.row-checkbox');
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const row = this.closest('tr');
+                    row.classList.toggle('highlight', this.checked);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Entrada</h1>
+
+    <div class="table-container">
+        <!-- Tabla en Español -->
+        <table>
+            <tr>
+                <th class="checkbox-cell"></th>
+                <th>ESPAÑOL</th>
+                <th>EJEMPLO</th>
+            </tr>
+            <tr>
+                <td class="checkbox-cell"><input type="checkbox" class="row-checkbox"></td>
+                <td>IDENTIFICA AL CLIENTE</td>
+                <td>¿Puedo hablar con [nombre completo del miembro]?</td>
+            </tr>
+            <tr>
+                <td class="checkbox-cell"><input type="checkbox" class="row-checkbox"></td>
+                <td>IDENTIFICATE Y A LA COMPAÑIA/ SCRIPT DE CALIDAD</td>
+                <td>Mi nombre es [tu nombre], le llamo de Oportun. Esta llamada podría ser grabada por motivos de calidad.</td>
+            </tr>
+            <tr>
+                <td class="checkbox-cell"><input type="checkbox" class="row-checkbox"></td>
+                <td>PROPOSITO DE LA LLAMADA</td>
+                <td>Le llamo con respecto a tu [tipo de cuenta/producto] de Oportun.</td>
+            </tr>
+            <tr>
+                <td class="checkbox-cell"><input type="checkbox" class="row-checkbox"></td>
+                <td>MINIMIRANDA (SOLO SI APLICA)</td>
+                <td>Esta comunicación es un intento de cobrar una deuda y cualquier información obtenida será utilizada para ese propósito.</td>
+            </tr>
+            <tr>
+                <td class="checkbox-cell"><input type="checkbox" class="row-checkbox"></td>
+                <td>PAUSA</td>
+                <td>Haga una pausa para darle tiempo al miembro para responder.</td>
+            </tr>
+        </table>
+
+        <!-- Tabla en Inglés -->
+        <table>
+            <tr>
+                <th class="checkbox-cell"></th>
+                <th>ENGLISH</th>
+                <th>EXAMPLE</th>
+            </tr>
+            <tr>
+                <td class="checkbox-cell"><input type="checkbox" class="row-checkbox"></td>
+                <td>IDENTIFY RPC</td>
+                <td>May I please speak with [member’s full name]?</td>
+            </tr>
+            <tr>
+                <td class="checkbox-cell"><input type="checkbox" class="row-checkbox"></td>
+                <td>IDENTIFY YOURSELF AND THE COMPANY/QUALITY ASSURANCE DISCLOUSURE</td>
+                <td>This call may be recorded for quality assurance purposes.</td>
+            </tr>
+            <tr>
+                <td class="checkbox-cell"><input type="checkbox" class="row-checkbox"></td>
+                <td>STATE PURPOSE OF THE CALL</td>
+                <td>I am calling regarding your Oportun [type of account/product].</td>
+            </tr>
+            <tr>
+                <td class="checkbox-cell"><input type="checkbox" class="row-checkbox"></td>
+                <td>MINIMIRANDA IF APPLICABLE</td>
+                <td>This is an attempt to collect a debt and any information obtained will be used for that purpose.</td>
+            </tr>
+            <tr>
+                <td class="checkbox-cell"><input type="checkbox" class="row-checkbox"></td>
+                <td>PAUSE</td>
+                <td>Pause to allow the member time to respond.</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

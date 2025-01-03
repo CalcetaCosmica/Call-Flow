@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d5f5e3; /* Fondo verde claro */
+}
+
+#screen {
+    width: 800px;
+    margin: 0 auto;
+}
+
+
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #82e0aa; /* Un verde pastel para los botones */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #5dade2; /* Un verde pastel un poco más oscuro al pasar el ratón */
+}
+#logo {
+    width: 200px; /* Ancho más pequeño para el logo */
+    height: auto; /* Altura ajustada automáticamente para mantener la proporción */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin-bottom: 200px; /* Espacio entre el logo y el título */
+}
+
+h1 {
+    font: normal normal 600 4.625rem/100% TT Commons Classic; /* Estilo de fuente específico */
+    margin-top: 80px; /* Espacio entre el título y el logo */
+}
+h2 {
+    font: normal normal 600 2.625rem/100% TT Commons Classic; /* Estilo de fuente específico */
+
+}
+#menu {
+    text-align: center;
+}
+.hidden-section {
+    display: none;
+}
+
+/* Agrega un estilo para ocultar la sección de aperturas */
+#aperturas {
+display: block;
+}
+
+#aperturas.hidden-section {
+display: none;
+}
+
+/* Estilo para la transición de la pantalla de carga */
+body {
+    overflow: hidden; /* Evita que la página se desplace durante la transición */
+}
+
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Color de fondo de la pantalla de carga */
+    z-index: 9999; /* Asegura que la pantalla de carga esté en la parte superior */
+    opacity: 1; /* La pantalla de carga es inicialmente visible */
+    transition: opacity 0.5s ease; /* Transición suave de la opacidad */
+}
+
+.page-transition.fade-out {
+    opacity: 0; /* La pantalla de carga se desvanece */
+}
+
+.menu {
+    position: fixed; /* Fija la barra de menú en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #808080; /* Color de fondo del menú */
+    color: white; /* Color de texto del menú */
+    padding: 20px 20px; /* Espaciado interno del menú */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
+}
+
+.menu #logo {
+    width: 200px; /* Ancho más pequeño para el logo */
+    height: auto; /* Altura ajustada automáticamente para mantener la proporción */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin-bottom: 200px; /* Espacio entre el logo y el título */
+}
+
+
+.menu button {
+    background-color: transparent; /* Botones transparentes */
+    border: none;
+    color: white; /* Color de texto del botón */
+    padding: 5px 10px; /* Espaciado interno del botón */
+    margin-right: 10px; /* Espaciado a la derecha entre botones */
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Color de fondo al pasar el cursor sobre el botón */
+}
+
+h2 a {
+    color: #6CDB8B ; /* Cambia el color del texto a verde */
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+h2 a:hover {
+    color: darkgreen; /* Cambia el color del texto a verde oscuro al pasar el cursor */
+}
+
+.contenedor {
+    background-color: #6CDB8B; /* Color de fondo verde */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 10px 0; /* Margen entre los contenedores */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    width: 400px; /* Ancho del contenedor */
+    height: auto; /* El alto se ajusta al contenido */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición */
+}
+
+.contenedor:hover {
+    transform: scale(1.05); /* Hace que el contenedor crezca ligeramente al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega sombra al pasar el mouse */
+}
+
+.contenedor a {
+    color: white; /* Color del texto blanco */
+    text-decoration: none; /* Quitar subrayado */
+    font-size: 18px; /* Tamaño de la fuente */
+    display: block; /* Hace que el enlace ocupe todo el contenedor */
+    height: 100%; /* Asegura que el enlace ocupe todo el alto */
+    width: 100%; /* Hace que el enlace ocupe todo el ancho */
+}
+
+/* Transición de página al hacer clic */
+.contenedor a:active {
+    opacity: 0.8; /* Hace que el enlace se vea un poco más oscuro cuando se hace clic */
+}
+
